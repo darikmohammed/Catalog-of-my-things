@@ -12,10 +12,10 @@ class Item
     @archived = true if can_be_archieved?
   end
 
-
   def add_author(author)
     @author = author
     author.add_item(self)
+  end
 
   def add_label(label)
     @label = label
