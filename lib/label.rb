@@ -1,5 +1,6 @@
 class Label
   attr_accessor :title, :color
+
   def initialize(title = 'Unknown', color = 'Unknown')
     @title = title
     @color = color
