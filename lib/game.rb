@@ -3,7 +3,7 @@ require_relative 'item'
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(publish_date = 'Undefined', multiplayer = Time.now.strftime('%d/%m/%Y'), last_played_at = 'Undefined',
+  def initialize(publish_date = 'Undefined', last_played_at = Time.now.strftime('%d/%m/%Y'), multiplayer: false,
                  archived: false)
     super(publish_date, archived: archived)
     @multiplayer = multiplayer
