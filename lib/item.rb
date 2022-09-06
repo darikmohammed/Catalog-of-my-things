@@ -25,6 +25,7 @@ class Item
 
   def can_be_archieved?
     return true if publish_date > 10
+
     false
   end
 end
