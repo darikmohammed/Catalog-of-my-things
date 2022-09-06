@@ -4,7 +4,7 @@ class Author
   def initialize(first_name = 'Undefined', last_name = 'Undefined')
     @last_name = last_name
     @first_name = first_name
-    @items = items
+    @items = []
   end
 
   def add_item(item)
