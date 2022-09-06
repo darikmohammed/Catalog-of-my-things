@@ -18,4 +18,17 @@ describe 'Book' do
       expect(@book.archived).to be true
     end
   end
+
+  context 'Update attributes' do
+    it 'should update publisher' do
+      @book.publisher = 'Changed'
+
+      expect(@book.publisher).to eq 'Changed'
+    end
+    it 'should update the cover state' do
+      @book.cover_state = 'good'
+
+      expect(@book.cover_state).to eq 'good'
+    end
+  end
 end
