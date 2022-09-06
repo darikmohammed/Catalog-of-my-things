@@ -3,7 +3,7 @@ require_relative '../lib/book'
 
 describe 'Book' do
   before do
-    @book = Book.new('01/02/2022', 'J K', 'bad', archived: false )
+    @book = Book.new('01/02/2022', 'J K', 'bad', archived: false)
   end
 
   context '#new' do

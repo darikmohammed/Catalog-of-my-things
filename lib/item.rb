@@ -1,7 +1,8 @@
 require 'date'
 class Item
   attr_accessor :publish_date, :label
-  attr_reader :archived, :label
+  attr_reader :archived
+
   def initialize(publish_date, archived: false)
     @publish_date = publish_date
     @archived = archived
@@ -20,7 +21,7 @@ class Item
   private
 
   def can_be_archieved?
-    currentDate = Date.today.year
-    currentDate - Date.parse(publish_date).year > 10
+    current_date = Date.today.year
+    current_date - Date.parse(publish_date).year > 10
   end
 end
