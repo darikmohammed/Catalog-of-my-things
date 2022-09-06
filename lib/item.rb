@@ -5,6 +5,7 @@ class Item
     @publish_date = publish_date
     @archived = archived
     @label = nil
+    @genre = nil
   end
 
   def move_to_archive()
@@ -18,7 +19,7 @@ class Item
 
   def add_genre(genre)
     @genre = genre
-    genre.items << self unless genre.items.include?(self)
+    genre.add_item(self)
   end
 
   private
