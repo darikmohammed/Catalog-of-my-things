@@ -1,3 +1,4 @@
+require_relative '../bin/app'
 class Main
   def prompt
     print '
@@ -20,14 +21,25 @@ Please choose an option by entering a number:
 
   def main
     exit = 0
+    @app = App.new()
     puts 'Welcome to Catalog of my strings'
 
     while exit.zero?
       prompt
       option = gets.chomp.to_i
       exit = 1 if option == 13
+      select_option(option)
     end
-    puts 'Thank you for using our app'
+  end
+
+  def select_option(option)
+    case option
+    when 1 then @app.list_books
+    when 13 then puts 'Thank you for using our app'
+    else
+      puts 'Please choose the correct option.'
+      return
+    end
   end
 end
 
