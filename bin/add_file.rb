@@ -17,6 +17,26 @@ module AddFile
     puts "\n\nNew book Added\n"
   end
 
+  def add_music
+    puts "\n*********\nAdding a Music Album"
+    puts 'Please enter the following datas'
+    puts '---------'
+    puts 'On_spotify true or false:'
+    on_spotify = gets.chomp
+    puts "Publish Date 'dd/mm/yyyy':"
+    publish_date = gets.chomp.to_s
+    puts "\n*********\nAdding a new Genre"
+    puts '---------'
+    puts 'Genre name'
+    name = gets.chomp.to_s
+    genre = Genre.new(name)
+    @app.add_genre(genre)
+    music = MusicAlbum.new(publish_date, on_spotify: on_spotify)
+    @app.add_music(music)
+    music.add_genre(genre)
+    puts "\n\nNew MusicAlbum Added\n"
+  end
+
   def add_label
     puts "\n*********\nAdding Label for the book."
     puts "Please enter the following data's"
