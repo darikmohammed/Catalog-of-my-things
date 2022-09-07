@@ -32,6 +32,7 @@ module AddFile
     last_played_at = gets.chomp.to_s
     game = Game.new(publish_date, last_played_at)
     @app.add_game(game)
+    game.add_author(author)
     puts "\n\nNew Game Added\n"
   end
 end
