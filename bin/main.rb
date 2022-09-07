@@ -1,6 +1,8 @@
 require_relative '../bin/app'
 require_relative '../lib/book'
+require_relative '../bin/add_file'
 class Main
+  include AddFile
   def prompt
     print '
 Please choose an option by entering a number:
@@ -64,23 +66,6 @@ Please choose an option by entering a number:
     else
       puts 'Please choose the correct option.'
     end
-  end
-
-  def add_book
-    puts "\n*********\nAdding Book"
-    puts 'Please enter the following datas'
-    puts '---------'
-    puts 'Publisher:'
-    publisher = gets.chomp.to_s
-    puts 'Cover State:'
-    cover_state = gets.chomp.to_s
-    puts "Publish Date 'dd/mm/yyyy':"
-    publish_date = gets.chomp.to_s
-    puts "Archived 'true/false':"
-    archived = gets.chomp
-    book = Book.new(publish_date, publisher, cover_state, archived: archived)
-    @app.add_book(book)
-    puts "\n\nNew book Added\n"
   end
 end
 
