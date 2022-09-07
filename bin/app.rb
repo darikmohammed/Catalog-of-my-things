@@ -1,7 +1,11 @@
+require_relative '../bin/file_update'
 class App
+  include FileUpdate
+  attr_reader :books, :labels
+
   def initialize
-    @books = []
-    @labels = []
+    @books = reader_books
+    @labels = reader_labels
     @games = []
     @authors = []
   end
@@ -52,6 +56,10 @@ class App
 
   def add_book(book)
     @books << book
+  end
+
+  def add_label(label)
+    @labels << label
   end
 
   def add_game(game)
