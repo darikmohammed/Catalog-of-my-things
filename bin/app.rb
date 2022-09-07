@@ -30,7 +30,6 @@ class App
     end
   end
 
-
   def list_music
     puts "\n*********\nAll Musics Albums"
     puts '---------'
@@ -49,6 +48,8 @@ class App
     @genres.each do |genre|
       puts "Id: #{genre.__id__} "
       puts "Name: #{genre.name}"
+    end
+  end
 
   def list_authors
     puts "\n*********\nAll Authors"
@@ -69,7 +70,6 @@ class App
       puts "Game was published on: #{game.publish_date}"
       puts "Game was last played on: #{game.last_played_at}"
       puts "Multiplayer: #{game.multiplayer}\n"
-
     end
   end
 
@@ -77,13 +77,13 @@ class App
     @books << book
   end
 
-
   def add_music(music)
     @musics << music
   end
 
   def add_genre(genre)
     @genres << genre
+  end
 
   def add_game(game)
     @games << game
@@ -91,6 +91,5 @@ class App
 
   def add_author(author)
     @authors << author
-
   end
 end

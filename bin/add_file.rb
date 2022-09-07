@@ -55,5 +55,4 @@ module AddFile
     game.add_author(author)
     puts "\n\nNew Game Added\n"
   end
-
 end
