@@ -1,5 +1,6 @@
 require_relative '../bin/app'
 require_relative '../lib/book'
+require_relative '../lib/music_album'
 require_relative '../bin/add_file'
 class Main
   include AddFile
@@ -46,7 +47,7 @@ Please choose an option by entering a number:
   def list_selection(option)
     case option
     when 1 then @app.list_books
-    # when 2 then @app.list_music
+    when 2 then @app.list_music
     # when 3 then @app.list_movies
     # when 4 then @app.list_games
     # when 5 then @app.list_genres
@@ -59,7 +60,7 @@ Please choose an option by entering a number:
   def add_selection(option)
     case option
     when 9 then add_book
-    # when 10 then add_music
+    when 10 then add_music
     # when 11 then add_movie
     # when 12 then add_game
     when 13 then puts 'Thank you for using our app'
