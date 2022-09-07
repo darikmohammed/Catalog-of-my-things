@@ -17,7 +17,6 @@ module AddFile
     puts "\n\nNew book Added\n"
   end
 
-
   def add_music
     puts "\n*********\nAdding a Music Album"
     puts 'Please enter the following datas'
@@ -36,7 +35,7 @@ module AddFile
     @app.add_music(music)
     music.add_genre(genre)
     puts "\n\nNew MusicAlbum Added\n"
-end
+  end
 
   def add_label
     puts "\n*********\nAdding Label for the book."
