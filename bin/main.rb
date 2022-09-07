@@ -35,6 +35,7 @@ Please choose an option by entering a number:
   def select_option(option)
     case option
     when 1 then @app.list_books
+    when 6 then @app.list_labels
     when 13 then puts 'Thank you for using our app'
     else
       puts 'Please choose the correct option.'
