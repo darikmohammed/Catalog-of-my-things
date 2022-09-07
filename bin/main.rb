@@ -74,7 +74,7 @@ Please choose an option by entering a number:
       write_json
       puts 'Thank you for using our app'
     else
-      puts 'Please choose the correct option.'
+      puts 'Under Construction.'
     end
   end
 end
