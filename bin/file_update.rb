@@ -7,6 +7,10 @@ module FileUpdate
       json_book = JSON.generate(book)
       File.write('data/book.json', "#{json_book}\n", mode: 'a')
     end
+    @app.labels.each do |label|
+      json_label = JSON.generate(label)
+      File.write('data/label.json', "#{json_label}\n", mode: 'a')
+    end
   end
 
   def reader_books

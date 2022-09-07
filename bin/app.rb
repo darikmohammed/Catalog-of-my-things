@@ -32,4 +32,7 @@ class App
   def add_book(book)
     @books << book
   end
+  def add_label(label)
+    @labels << label
+  end
 end

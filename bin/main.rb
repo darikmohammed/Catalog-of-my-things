@@ -1,5 +1,6 @@
 require_relative '../bin/app'
 require_relative '../lib/book'
+require_relative '../lib/label'
 require_relative '../bin/add_file'
 require_relative '../bin/file_update'
 class Main
