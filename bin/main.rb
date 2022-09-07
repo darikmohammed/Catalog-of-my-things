@@ -1,4 +1,5 @@
 require_relative '../bin/app'
+require_relative '../lib/book'
 class Main
   def prompt
     print '
@@ -21,7 +22,7 @@ Please choose an option by entering a number:
 
   def main
     exit = 0
-    @app = App.new()
+    @app = App.new
     puts 'Welcome to Catalog of my strings'
 
     while exit.zero?
@@ -36,11 +37,29 @@ Please choose an option by entering a number:
     case option
     when 1 then @app.list_books
     when 6 then @app.list_labels
+    when 9 then add_book
     when 13 then puts 'Thank you for using our app'
     else
       puts 'Please choose the correct option.'
-      return
+      nil
     end
+  end
+
+  def add_book
+    puts "\n*********\nAdding Book"
+    puts 'Please enter the following datas'
+    puts '---------'
+    puts 'Publisher:'
+    publisher = gets.chomp.to_s
+    puts 'Cover State:'
+    cover_state = gets.chomp.to_s
+    puts "Publish Date 'dd/mm/yyyy':"
+    publish_date = gets.chomp.to_s
+    puts "Archived 'true/false':"
+    archived = gets.chomp
+    book = Book.new(publish_date, publisher, cover_state, archived:archived)
+    @app.add_book(book)
+    puts "\n\nNew book Added\n"
   end
 end
 
