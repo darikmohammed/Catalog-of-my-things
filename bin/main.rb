@@ -57,7 +57,7 @@ Please choose an option by entering a number:
     publish_date = gets.chomp.to_s
     puts "Archived 'true/false':"
     archived = gets.chomp
-    book = Book.new(publish_date, publisher, cover_state, archived:archived)
+    book = Book.new(publish_date, publisher, cover_state, archived: archived)
     @app.add_book(book)
     puts "\n\nNew book Added\n"
   end
