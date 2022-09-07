@@ -1,7 +1,9 @@
+require_relative '../bin/file_update'
 class App
+  include FileUpdate
   attr_reader :books, :labels
   def initialize
-    @books = []
+    @books = reader_books
     @labels = []
   end
 
