@@ -4,7 +4,7 @@ class App
   attr_reader :books, :labels
   def initialize
     @books = reader_books
-    @labels = []
+    @labels = reader_labels
   end
 
   def list_books

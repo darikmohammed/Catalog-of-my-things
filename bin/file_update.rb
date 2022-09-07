@@ -20,4 +20,17 @@ module FileUpdate
     end
     books
   end
+
+  def reader_labels
+    unless File.exist?('data/label.json')
+      File.open('data/label.json', 'w')
+      return []
+    end
+    labels = []
+    File.foreach('data/label.json') do |line|
+      labels << JSON.parse(line, create_additions:true )
+    end
+    labels
+  end
+
 end
