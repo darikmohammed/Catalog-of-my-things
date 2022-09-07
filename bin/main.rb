@@ -1,8 +1,10 @@
 require_relative '../bin/app'
 require_relative '../lib/book'
 require_relative '../bin/add_file'
+require_relative '../bin/file_update'
 class Main
   include AddFile
+  include FileUpdate
   def prompt
     print '
 Please choose an option by entering a number:
@@ -62,7 +64,9 @@ Please choose an option by entering a number:
     # when 10 then add_music
     # when 11 then add_movie
     # when 12 then add_game
-    when 13 then puts 'Thank you for using our app'
+    when 13
+      write_json
+      puts 'Thank you for using our app'
     else
       puts 'Please choose the correct option.'
     end

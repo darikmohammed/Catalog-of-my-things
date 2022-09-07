@@ -1,4 +1,5 @@
 class App
+  attr_reader :books, :labels
   def initialize
     @books = []
     @labels = []
