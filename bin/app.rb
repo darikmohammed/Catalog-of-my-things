@@ -2,6 +2,7 @@ require_relative '../bin/file_update'
 class App
   include FileUpdate
   attr_reader :books, :labels
+
   def initialize
     @books = reader_books
     @labels = reader_labels
@@ -32,6 +33,7 @@ class App
   def add_book(book)
     @books << book
   end
+
   def add_label(label)
     @labels << label
   end

@@ -2,7 +2,9 @@ require 'json'
 
 module FileUpdate
   def write_json
-    File.write('data/book.json', '',mode: 'w')
+    File.write('data/book.json', '', mode: 'w')
+    File.write('data/label.json', '', mode: 'w')
+
     @app.books.each do |book|
       json_book = JSON.generate(book)
       File.write('data/book.json', "#{json_book}\n", mode: 'a')
@@ -32,9 +34,8 @@ module FileUpdate
     end
     labels = []
     File.foreach('data/label.json') do |line|
-      labels << JSON.parse(line, create_additions:true )
+      labels << JSON.parse(line, create_additions: true)
     end
     labels
   end
-
 end
