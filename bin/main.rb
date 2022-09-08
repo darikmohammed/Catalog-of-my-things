@@ -1,10 +1,13 @@
 require_relative '../bin/app'
 require_relative '../lib/book'
+require_relative '../lib/music_album'
+require_relative '../lib/genre'
 require_relative '../lib/label'
 require_relative '../lib/game'
 require_relative '../lib/author'
 require_relative '../bin/add_file'
 require_relative '../bin/file_update'
+
 class Main
   include AddFile
   include FileUpdate
@@ -51,10 +54,10 @@ Please choose an option by entering a number:
   def list_selection(option)
     case option
     when 1 then @app.list_books
-    # when 2 then @app.list_music
+    when 2 then @app.list_music
     # when 3 then @app.list_movies
     when 4 then @app.list_games
-    # when 5 then @app.list_genres
+    when 5 then @app.list_genres
     when 6 then @app.list_labels
     when 7 then @app.list_authors
       # when 8 then @app.list_sources
@@ -64,14 +67,14 @@ Please choose an option by entering a number:
   def add_selection(option)
     case option
     when 9 then add_book
-    # when 10 then add_music
+    when 10 then add_music
     # when 11 then add_movie
     when 12 then add_game
     when 13
       write_json
       puts 'Thank you for using our app'
     else
-      puts 'Please choose the correct option.'
+      puts 'Under Construction.'
     end
   end
 end
