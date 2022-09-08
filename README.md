@@ -1,56 +1,55 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Catalog of my things
 
-> Description the project.
-
+> Catalogue of my things is an app that can be run on the console. It has input of data and also stores it in json format which can be read again after exiting the whole app.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Rspec
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+## Live Demo (coming soon...)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
 ### Setup
 
-### Install
+- git clone https://github.com/darikmohammed/Catalog-of-my-things.git
+- cd Catalog-of-my-things
+- Open it with your text editor.
 
-### Usage
+## Usage
 
-### Run tests
+- cd Catalog-of-my-things
+- Enter the command ruby main.rb
 
-### Deployment
+## Testing usage
 
-
+- Install Rspec gem - gem install rspec
+- In the terminal run: rspec
 
 ## Authors
 
-👤 **Author1**
+👤 **Darik Mohammed**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/darikmohammed)
+- Twitter: [@twitterhandle](https://twitter.com/r_darik)
+- LinkedIn: [darikmohammed](https://www.linkedin.com/in/darik-mohammed/)
 
-👤 **Author2**
+👤 **Owoeye Olaoluwa (Olamarx)**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Olamarx)
+- Twitter: [@twitterhandle](https://twitter.com/Owoeye0laoluwa)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/olaoluwa-owoeye-617702162/)
+- Facebook: [Facebook](https://web.facebook.com/olaoluwa.owoeye.39)
+
+👤 **Dino Quispe**
+
+- GitHub: [@dqarias](https://github.com/dqarias)
+- Twitter: [@DinoRonald7](https://twitter.com/DinoRonald7?t=Zanx9DXMEG9C_PNF3woZFg&s=08)
+- LinkedIn: [Dino Quispe](https://www.linkedin.com/in/dino-ronald-quispe-arias/)
 
 ## 🤝 Contributing
 
