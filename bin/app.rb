@@ -1,13 +1,15 @@
 require_relative '../bin/file_update'
 class App
   include FileUpdate
-  attr_reader :books, :labels, :games, :authors
+  attr_reader :books, :labels, :games, :authors, :musics, :genres
 
   def initialize
     @books = reader_books
     @labels = reader_labels
     @games = reader_games
     @authors = reader_authors
+    @musics = reader_musics
+    @genres = reader_genres
   end
 
   def list_books
