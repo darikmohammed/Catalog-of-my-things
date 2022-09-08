@@ -44,7 +44,9 @@ module AddFile
     publish_date = gets.chomp.to_s
     puts "Last played 'dd/mm/yyyy':"
     last_played_at = gets.chomp.to_s
-    game = Game.new(publish_date, last_played_at)
+    puts 'Multiplayer [true/false]:'
+    multiplayer = gets.chomp.to_s
+    game = Game.new(publish_date, last_played_at, multiplayer)
     @app.add_game(game)
     game.add_author(author)
     puts "\n\nNew Game Added\n"
