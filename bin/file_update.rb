@@ -6,6 +6,8 @@ module FileUpdate
     File.write('data/label.json', '', mode: 'w')
     File.write('data/author.json', '', mode: 'w')
     File.write('data/game.json', '', mode: 'w')
+    File.write('data/music.json', '', mode: 'w')
+    File.write('data/genre.json', '', mode: 'w')
 
     @app.books.each do |book|
       json_book = JSON.generate(book)
