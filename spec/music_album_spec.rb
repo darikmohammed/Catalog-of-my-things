@@ -18,7 +18,7 @@ describe 'Music Album' do
     end
 
     it 'should be archive' do
-      music_album2 = MusicAlbum.new('02/01/2000', false , true )
+      music_album2 = MusicAlbum.new('02/01/2000', false, true)
       music_album2.move_to_archive
       expect(music_album2.archived).to be true
     end
