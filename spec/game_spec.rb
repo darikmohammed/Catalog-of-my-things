@@ -24,11 +24,6 @@ describe Game do
     expect(@game.multiplayer = true).to eql true
   end
 
-  it 'Should be moved to achive' do
-    @game.move_to_archive
-    expect(@game.archived).to eql false
-  end
-
   it 'Should not be moved to achive' do
     @game.move_to_archive
     expect(@game.archived).not_to eql true
