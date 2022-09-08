@@ -31,7 +31,7 @@ module AddFile
     name = gets.chomp.to_s
     genre = Genre.new(name)
     @app.add_genre(genre)
-    music = MusicAlbum.new(publish_date, on_spotify: on_spotify)
+    music = MusicAlbum.new(publish_date, false, on_spotify)
     @app.add_music(music)
     music.add_genre(genre)
     puts "\n\nNew MusicAlbum Added\n"

@@ -3,7 +3,7 @@ require_relative '../lib/music_album'
 
 describe 'Music Album' do
   before do
-    @music_album = MusicAlbum.new('02/01/2020', on_spotify: true)
+    @music_album = MusicAlbum.new('02/01/2020', false, false)
   end
 
   context '#new' do
@@ -13,8 +13,14 @@ describe 'Music Album' do
   end
 
   context '#move_to_archive' do
+    it 'should not be archive' do
+      expect(@music_album.archived).to eq false
+    end
+
     it 'should be archive' do
-      expect(@music_album.archived).to be false
+      music_album2 = MusicAlbum.new('02/01/2000', false, true)
+      music_album2.move_to_archive
+      expect(music_album2.archived).to be true
     end
   end
 

@@ -6,6 +6,8 @@ module FileUpdate
     File.write('data/label.json', '', mode: 'w')
     File.write('data/author.json', '', mode: 'w')
     File.write('data/game.json', '', mode: 'w')
+    File.write('data/music.json', '', mode: 'w')
+    File.write('data/genre.json', '', mode: 'w')
 
     @app.books.each do |book|
       json_book = JSON.generate(book)
@@ -24,6 +26,16 @@ module FileUpdate
     @app.authors.each do |author|
       json_author = JSON.generate(author)
       File.write('data/author.json', "#{json_author}\n", mode: 'a')
+    end
+
+    @app.musics.each do |music|
+      json_music = JSON.generate(music)
+      File.write('data/music.json', "#{json_music}\n", mode: 'a')
+    end
+
+    @app.genres.each do |genre|
+      json_genre = JSON.generate(genre)
+      File.write('data/genre.json', "#{json_genre}\n", mode: 'a')
     end
   end
 
@@ -73,5 +85,29 @@ module FileUpdate
       games << JSON.parse(line, create_additions: true)
     end
     games
+  end
+
+  def reader_musics
+    unless File.exist?('data/music.json')
+      File.open('data/music.json', 'w')
+      return []
+    end
+    musics = []
+    File.foreach('data/music.json') do |line|
+      musics << JSON.parse(line, create_additions: true)
+    end
+    musics
+  end
+
+  def reader_genres
+    unless File.exist?('data/genre.json')
+      File.open('data/genre.json', 'w')
+      return []
+    end
+    genres = []
+    File.foreach('data/genre.json') do |line|
+      genres << JSON.parse(line, create_additions: true)
+    end
+    genres
   end
 end
