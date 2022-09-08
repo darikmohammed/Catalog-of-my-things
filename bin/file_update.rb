@@ -15,15 +15,15 @@ module FileUpdate
       json_label = JSON.generate(label)
       File.write('data/label.json', "#{json_label}\n", mode: 'a')
     end
-    
-    @app.authors.each do |author|
-      json_author = JSON.generate(author)
-      File.write('data/author.json', "#{json_author}\n", mode: 'a')
-    end
 
     @app.games.each do |game|
       json_game = JSON.generate(game)
       File.write('data/game.json', "#{json_game}\n", mode: 'a')
+    end
+
+    @app.authors.each do |author|
+      json_author = JSON.generate(author)
+      File.write('data/author.json', "#{json_author}\n", mode: 'a')
     end
   end
 
@@ -51,7 +51,7 @@ module FileUpdate
     labels
   end
 
-  def reader_author
+  def reader_authors
     unless File.exist?('data/author.json')
       File.open('data/author.json', 'w')
       return []
@@ -63,7 +63,7 @@ module FileUpdate
     authors
   end
 
-  def reader_game
+  def reader_games
     unless File.exist?('data/game.json')
       File.open('data/game.json', 'w')
       return []
