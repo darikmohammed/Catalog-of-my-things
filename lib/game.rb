@@ -4,7 +4,7 @@ require 'date'
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(publish_date = Time.now.strftime('%d/%m/%Y'),
+  def initialize(publish_date,
                  last_played_at = Time.now.strftime('%d/%m/%Y'),
                  multiplayer = 'false', archived = 'false') # once
     # i change the achived to achived: false, it would pass but wont render on the UI
